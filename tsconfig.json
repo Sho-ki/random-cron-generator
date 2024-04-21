@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"target": "ES2016",
+		"module": "commonjs",
+		"outDir": "./dist",
+		"incremental": true,
+		"declaration": true,
+		"removeComments": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"sourceMap": true,
+		"noErrorTruncation": true,
+		"resolveJsonModule": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitOverride": true,
+		"exactOptionalPropertyTypes": true,
+		"noUncheckedIndexedAccess": true,
+		"allowUnusedLabels": false,
+		"allowUnreachableCode": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strictPropertyInitialization": true
+	},
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
