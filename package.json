@@ -1,6 +1,6 @@
 {
 	"name": "random-cron-generator",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Generate cron strings with random values.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
