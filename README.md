@@ -34,7 +34,7 @@ console.log(cronExpression); // Outputs a valid cron string (e.g. '0 0 * * *')
 const customCronExpression = generateRandomCron({
     randomConfig: {
         minute: { min: 0, max: 59 }, // range of minutes
-        hour: true, // random hour. If false, hour will be *
+        hour: true, // random hour. If false, it will be * (default)
         dayOfMonth: '*/7', // string cron expression
         month: 5, // specific month
         dayOfWeek: undefined // * (default)

@@ -76,9 +76,9 @@ export class RandomCronGenerator {
 		const cronParts = [];
 		for (const field of cronFields) {
 			const config = this.randomConfig[field];
-			if (config === true || config === undefined) {
+			if (config === true) {
 				cronParts.push(this.generateRandomValueForField(field));
-			} else if (config === false || config === '*') {
+			} else if (!config || config === '*') {
 				cronParts.push('*');
 			} else if (typeof config === 'number') {
 				cronParts.push(config.toString());
