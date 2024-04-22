@@ -8,6 +8,23 @@ describe('RandomCronGenerator generateRandomCron Method', () => {
 		expect(cron).toMatch(/^\d{1,2} \d{1,2} \d{1,2} \d{1,2} \d{1}$/);
 	});
 
+	it('should generate a valid cron string. Only minute field is random', () => {
+		const generator = new RandomCronGenerator({
+			randomConfig: {
+				minute: true,
+				hour: {
+					min: 8,
+					max: 8,
+				},
+				dayOfMonth: '*',
+				month: '*',
+				dayOfWeek: '*',
+			},
+		});
+		const cron = generator.generateRandomCron();
+		expect(cron).toMatch(/^\d{1,2} 8 \* \* \*$/);
+	});
+
 	it('should generate a valid cron string with custom settings (minute)', () => {
 		const generator = new RandomCronGenerator({
 			randomConfig: {
